@@ -21,21 +21,20 @@ const Hero = () => {
                 }
               }
             }
-    }
-       
+    }   
   `)
     return(
         <section id='hero'>
         <main>
 
         <div className='hero-text'>
-            <h1>Nós transformamos ideias em realidade.</h1>
+            <h1>Nós transformamos sonhos em realidade</h1>
             <p>Phasellus eget sem sed massa consequat ultrices vitae nec lorem. Fusce molestie turpis sit amet interdum placerat. In hac habitasse platea dictumst. Fusce iaculis ipsum neque, in viverra odio pretium fermentum.</p>
             <button>Clique aqui</button>
         </div>
 
         <div className='hero-image'>
-            <Img fluid={data.idea.childImageSharp.fluid} alt='hero image' fadeIn={true} durationFadeIn={1250} />
+            <Img fluid={data.idea.childImageSharp.fluid} alt='hero image' />
         </div>
 
         </main>

@@ -5,13 +5,13 @@ import Img from 'gatsby-image'
 const Portfolio = () => {
 
     const data = useStaticQuery(graphql`{
-        posts:allInstaNode {
+        posts:allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 6) {
           edges {
             node {
               localFile {
                 childImageSharp {
-                  fixed (width: 300, quality: 100) {
-                    ...GatsbyImageSharpFixed
+                  fluid (maxWidth: 720, quality: 100) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -25,9 +25,9 @@ const Portfolio = () => {
     `)
 
     return (
-        <section>
+        <section id='portfolio'>
         <div className='text'>
-            <h1>Instagram</h1>
+            <h1>Confira nossos trabalhos mais recentes</h1>
             <p>Confira nossos trabalhos mais recentes</p>
         </div>
         
@@ -35,7 +35,7 @@ const Portfolio = () => {
         {data.posts.edges.map(({node}, idx) => (
             <div className='single-post' key={node.id}>
             
-            <Img fixed={data.posts.edges[idx].node.localFile.childImageSharp.fixed} alt='posts instagram' />
+            <Img fluid={data.posts.edges[idx].node.localFile.childImageSharp.fluid} alt='posts instagram' />
             <p className='likes'>{node.likes} <span role='img' aria-label='emoji'>&#10084;</span> </p>
             
             </div>
