@@ -17,9 +17,6 @@ const ContactUs = () => {
         <input type="email" className='input' required="required" class="input-text" name="email" placeholder='E-mail'/>
         <input type='text' className='input' name='subject' id='subject' placeholder='Assunto' />
         <input type="hidden" name="bot-field" />
-
-        </form> 
-        </div>
         
         <div className='msg'>
         <textarea placeholder='Sua mensagem' />
@@ -29,6 +26,10 @@ const ContactUs = () => {
         </div>
         
         </div>
+        </form> 
+        </div>
+        
+        
 
       </div>  
     </div>
