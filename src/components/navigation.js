@@ -1,15 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Logo from '../images/z11.svg'
 
 const Navigation = () => {
 
-    let [ open, setOpen ] = useState(false);
-
 useEffect(() => {
     let prevScrollPos = window.pageYOffset;
     let myNavbar = document.getElementById('navbar');
-
-    
 
     window.onscroll = () => {
         let currentScrollPos = window.pageYOffset;
@@ -36,15 +32,15 @@ useEffect(() => {
         </div>
             <ul>
                 <li>
-                    <a href='!#' className='nav-item'>QUEM SOMOS</a>
+                    <a href='#form' className='nav-item'>QUEM SOMOS</a>
                 </li>
                 
                 <li>
-                    <a href='!#' className='nav-item'>PORTFÓLIO</a>
+                    <a href='#social' className='nav-item'>PORTFÓLIO</a>
                 </li>    
                 
                 <li>
-                    <a href='!#' className='nav-item'>CONTATO</a>
+                    <a href='#form' className='nav-item'>CONTATO</a>
                 </li>
             </ul>
 

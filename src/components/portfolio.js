@@ -10,7 +10,7 @@ const Portfolio = () => {
             node {
               localFile {
                 childImageSharp {
-                  fluid (maxWidth: 720, quality: 100) {
+                  fluid (maxWidth: 1024, quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }
