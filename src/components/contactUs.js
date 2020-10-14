@@ -9,7 +9,7 @@ const ContactUs = () => {
     <div className='wrapper'>
       <div className='contact-form' id='form'>
         <div className='input-fields'>
-        <form netlify-honeypot='bot-field' name='contato' autoComplete='off' data-netlify='true'>
+        <form action='/thanks' netlify-honeypot='bot-field' name='contato' autoComplete='off' data-netlify='true'>
 
         <input type="text" className='input' required="required" name="name" placeholder='Nome' />
         <input type="tel" className='input' required="required" name="telefone" placeholder='(00) 0000-0000' />
