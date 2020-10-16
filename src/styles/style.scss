@@ -60,6 +60,10 @@ section {
     grid-template-columns: 1fr 1fr;
 }
 
+#social {
+    margin-bottom: 2em;
+}
+
 /* Typography */
 
 a {
@@ -74,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin-bottom: .5em;
     text-transform: uppercase;
+    margin-bottom: 1em;
 }
 
 p {
@@ -164,16 +169,37 @@ button:hover {
 }
 
 /* Social */
-#social {
-    padding-top: 1rem;
+
+
+.post-info {
+    opacity: 0;
+    background-color: rgba(3, 57, 97, .75);
+    padding: 1em;
+    z-index: 1;
+    position: relative;
+    top: -50%;
+    transition: opacity 300ms ease;
+
+    .likes {
+        text-align: center;
+        font-weight: 500;
+
+        span {
+            color: #FF4C4C;
+        }
+    }
 }
 
 .single-post {
-    margin: .5rem;
+    margin-right: .5rem;
+}
+
+.single-post:hover .post-info {
+    opacity: 100%;
 }
 
 .single-post img {
-    border-radius: 8px;
+    z-index: 1;
 }
 
 ul {
@@ -201,6 +227,7 @@ ul {
 /* Form */
 .wrapper {
     display: flex;
+    justify-content: space-between;
     flex-flow: row wrap;
     width: 100%;
 }
@@ -264,10 +291,6 @@ textarea {
         }
 
         /* Form */
-        .wrapper {
-            width: 100%;
-        }
-
         #thanks {
             display: grid;
             grid-template-columns: 1fr;
@@ -281,6 +304,10 @@ textarea {
             .logo-thanks img{
                 width: 150px;
             }
+        }
+
+        #social {
+            padding-top: 1em;
         }
     }
     /* 720px */
@@ -296,7 +323,7 @@ textarea {
 
             .hero-image {
                 display: block;
-                width: 30%;
+                width: 50%;
             }
         }
 
@@ -311,18 +338,33 @@ textarea {
 
         .single-post {
             display: inline-block;
-            width: 30%; 
+            width: 45%; 
         }
 
         .contact-form {
             width: 50%;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #social {
+        justify-content: space-around;
+        width: 45%;
+        }
+
+        #form {
+         display: flex;
+         justify-content: space-between;   
         }
     }
 
     @media (min-width: 1024px) {
         .single-post {
             display: inline-block;
-            width: 25%;
+            width: 20%;
             transition: filter 500ms ease;
         }
 
@@ -330,17 +372,14 @@ textarea {
             cursor: pointer;
         }
 
-        #social {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1;
+        #hero {
+            min-height: 100vh;
+
+            .hero-image {
+                width: 30%;
+            }
         }
 
-        #form {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1;
-        }
     }
 
     

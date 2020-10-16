@@ -1,14 +1,34 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faFacebookF, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 
 const ContactUs = () => {
   return(
     <section id='form'>
-    <h1>Fale conosco</h1>
-    <div className='wrapper'>
-      <div className='contact-form' id='form'>
-        <div className='input-fields'>
+
+    <div id='social'>
+      <h1>Siga a Zero11WEB</h1>
+      <ul>
+        <li>
+          <a href='https://www.instagram.com/011web/'> <FontAwesomeIcon icon={faInstagram} size='3x' /></a>
+        </li>
+
+        <li>
+          <a href='https://www.facebook.com/zero11web'> <FontAwesomeIcon icon={faFacebookF} size='3x' /> </a>
+        </li>
+
+        <li>
+          <a href='https://wa.me/5511982193349?text=Adorei%20o%20site!'> <FontAwesomeIcon icon={faWhatsapp} size='3x' /> </a>
+        </li>
+        
+      </ul>
+    </div>
+
+    <div className='contact-form'>
+
+      <h1>Fale conosco</h1>
+      <div className='input-fields'>
         <form action='/thanks' netlify-honeypot='bot-field' name='contato' autoComplete='off' data-netlify='true'>
 
         <input type="text" className='input' required="required" name="name" placeholder='Nome' />
@@ -19,19 +39,15 @@ const ContactUs = () => {
 
         <div className='msg'>
         <textarea placeholder='Sua mensagem' />
+          <div className='form-button'>
+          <button id='send-button' type='submit'>Enviar</button>
+          </div>
+        </div>
 
-        <div className='form-button'>
-        <button id='send-button' type='submit'>Enviar</button>
-        </div>
-        
-        </div>
         </form> 
-        </div>
-        
-        
-
-      </div>  
-    </div>
+      </div>
+    </div>  
+  
     </section>
   )
 

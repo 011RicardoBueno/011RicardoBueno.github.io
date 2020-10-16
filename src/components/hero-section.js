@@ -19,7 +19,7 @@ const Hero = () => {
         <section id='hero'>
         
         <div className='hero-text'>
-            <h1>Nós transformamos sonhos em realidade</h1>
+            <h1>Nós transformamos ideias em realidade</h1>
             <p>Phasellus eget sem sed massa consequat ultrices vitae nec lorem. Fusce molestie turpis sit amet interdum placerat. In hac habitasse platea dictumst. Fusce iaculis ipsum neque, in viverra odio pretium fermentum.</p>
             <button>Clique aqui</button>
         </div>
