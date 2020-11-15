@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
+import { gsap } from 'gsap'
 
 const Portfolio = () => {
+
+  useEffect(() => {
+      let tl = gsap.timeline(
+        {scrollTrigger:
+           {trigger: '#portfolio',
+            start: 'top center'
+          }
+        });
+
+      tl.from('.single-post', 
+      {
+        stagger: {
+          amount: '2'
+        },
+      opacity: '0',
+      x: '-100'
+      })
+      .to('.single-post', { opacity: '1', x: '0'})
+
+  },[]);
 
     const data = useStaticQuery(graphql`{
         posts:allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 4) {

@@ -64,6 +64,25 @@ section {
     margin-bottom: 2em;
 }
 
+#ads {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 2em;
+    background-image: linear-gradient(#298fca, $primary-text);
+    color:white;
+
+    .image {
+        display: block;
+        width: 30vh;
+    }
+
+    .text {
+        width: 45%;
+        display: block;
+    }
+}
+
 /* Typography */
 
 a {
@@ -198,7 +217,12 @@ button:hover {
     opacity: 100%;
 }
 
+.single-post:hover img {
+    filter: grayscale(100);
+}
+
 .single-post img {
+    border-radius: 6px;
     z-index: 1;
 }
 
@@ -234,6 +258,7 @@ ul {
 
 .contact-form {
     width: 100%;
+    overflow: hidden;
 }
 
 
@@ -340,43 +365,46 @@ textarea {
             display: inline-block;
             width: 45%; 
         }
-
+        /*
         .contact-form {
             width: 50%;
         }
-
+        */
         .wrapper {
             display: flex;
             justify-content: space-between;
         }
 
         #social {
-        justify-content: space-around;
-        width: 45%;
+        padding-right: 1em;
+        }
+
+
+        #social ul { 
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: start;
         }
 
         #form {
-         display: flex;
-         justify-content: space-between;   
+         display: grid;  
+         grid-template-columns: 1fr 1fr 1fr;
         }
+
+        
     }
 
     @media (min-width: 1024px) {
         .single-post {
             display: inline-block;
             width: 20%;
-            transition: filter 500ms ease;
         }
-
-        .single-post:hover {
-            cursor: pointer;
-        }
-
+        
         #hero {
             min-height: 100vh;
 
             .hero-image {
-                width: 30%;
+                width: 45%;
             }
         }
 

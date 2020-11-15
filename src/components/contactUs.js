@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebookF, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { TimelineLite } from 'gsap'
 
 
 const ContactUs = () => {
+
+  let tl = new TimelineLite({ delay: '0.3'});
+
+  useEffect(() => {
+
+    tl.set('#social ul li', {opacity: 0})
+
+    tl.to('#social ul li', {
+      scrollTrigger: {
+        trigger: '#social',
+        toggleActions: 'restart'
+      },
+      opacity: '1',
+      duration: '3'
+    })
+    
+  }, [])
   return(
     <section id='form'>
 
